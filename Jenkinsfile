@@ -8,7 +8,8 @@ pipeline {
                 }
             }
             steps {
-                sh 'python -m py_compile sources/add2vals.py sources/calc.py' 
+                sh "chmod +x build.sh"
+                sh "./build.sh"
             }
         }
         stage('Test') {
